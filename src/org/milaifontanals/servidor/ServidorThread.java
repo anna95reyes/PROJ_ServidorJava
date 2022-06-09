@@ -56,7 +56,11 @@ public class ServidorThread extends Thread {
                 switch(codi){
                     case 1 :
                         retornar = cp.Login(dis.readUTF(), dis.readUTF());
-                        dos.writeUTF(retornar);
+                        if (retornar != null) {
+                            dos.writeUTF(retornar);
+                        } else {
+                            dos.writeUTF("");
+                        }
                         break;
                         
                     default:

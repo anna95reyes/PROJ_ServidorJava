@@ -24,13 +24,14 @@ import org.milaifontanals.interficie.IGestioProjectes;
 public class Servidor {
 
     private IGestioProjectes cp;
+    private Integer port = 5056;
     
     Servidor(IGestioProjectes interficie) {
         cp = interficie;
     }
     
     public void run() throws IOException {
-        ServerSocket serverSocket = new ServerSocket(1126);
+        ServerSocket serverSocket = new ServerSocket(port);
         
         while (true) {
 
