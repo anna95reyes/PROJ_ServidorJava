@@ -40,7 +40,7 @@ public class Main {
         Servidor server = new Servidor(cp);
             try {
                 server.run();
-            } catch (IOException ex) {
+            } catch (Exception ex) {
                 
             }
     }
